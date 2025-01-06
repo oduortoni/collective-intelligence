@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <div class="root">
+        <p>Please login to proceed</p>
+        <form class="form" id="login-form">
+            <div class="form-control">
+                <label>Username</label><br>
+                <input type="text" name="username" id="username" />
+            </div>
+            <div class="form-control">
+                <input type="submit" value="Login" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('login-form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            
+            fetch('/authenticate', {
+                method: 'POST',
+                body: formData,
+                credentials: 'same-origin',
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                console.log(document.cookie);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
