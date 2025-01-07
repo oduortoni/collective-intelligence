@@ -22,24 +22,28 @@
 
     <script>
     const form = document.getElementById('login-form');
-
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-
         const username = document.getElementById('username').value;
         const formData = new FormData();
         formData.append('username', username);
-        console.log("Form data: ", formData)
+        
+        // Debug output
+        formData.forEach((value, key) => {
+            console.log(key + ': ' + value);
+        });
 
         fetch('/authenticate', {
             method: 'POST',
             body: formData,
-            credentials: 'same-origin',
+            credentials: 'same-origin'
         })
-        .then(response => response.text())
+        .then(response => response.json())
         .then(data => {
-            console.log(data);
-            console.log(document.cookie);
+            console.log("Data:", data);
+            if (data.redirect) {
+                window.location.href = data.redirect;
+            }
         })
         .catch(error => {
             console.error('Error:', error);
