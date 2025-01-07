@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"net/http"
 	"html/template"
+	"net/http"
 )
 
 func Index(tmpl *template.Template) http.HandlerFunc {
