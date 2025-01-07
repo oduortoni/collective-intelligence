@@ -1,6 +1,6 @@
 # Format for a session documentation
 
-In the spirit of learning, we have discovered that there are different ways to explore a topic. 
+There are different ways to explore a topic. 
 
 **1.** A simple document
 
