@@ -15,13 +15,13 @@ func Login(tmpl *template.Template) http.HandlerFunc {
 		* redirect to dashboard if logged in
 		 */
 		// get the 'auth_token' cookie from the request
+		token := ""
 		cookie, err := r.Cookie("auth_token")
-		if err != nil {
-			http.Error(w, "Unauthorized, token missing", http.StatusUnauthorized)
-			return
+		if err == nil {
+			token = cookie.Value
 		}
 		// validate the token and retrieve the user
-		username := session.Remember(cookie.Value)
+		username := session.Remember(token)
 		// fmt.Println("Username: ", username)
 		if username != "" {
 			// already logged in

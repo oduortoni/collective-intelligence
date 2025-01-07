@@ -9,19 +9,19 @@ import (
 
 func Logout(tmpl *template.Template) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		token := ""
 		// get the 'auth_token' cookie from the request
 		cookie, err := r.Cookie("auth_token")
-		if err != nil {
-			http.Error(w, "Unauthorized, token missing", http.StatusUnauthorized)
-			return
+		if err == nil {
+			token = cookie.Value
 		}
 
 		// validate the token and retrieve the user
-		username := session.Remember(cookie.Value)
+		username := session.Remember(token)
 		if username == "" {
 			username = "Guest"
 		} else {
-			session.Delete(cookie.Value)
+			session.Delete(token)
 			username = "logged_out_user"
 		}
 
