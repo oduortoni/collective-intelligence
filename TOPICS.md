@@ -8,7 +8,7 @@ What does "stateless" mean? If each request is independent, how does the server 
 
 **Contributors**
 
-[Oduortoni](https://github.com/oduortoni)
+Antony Oduor | [GITHUB/oduortoni](https://github.com/oduortoni)
 
 ### 2) What is a network and why are protocols important in a network
 
@@ -16,5 +16,5 @@ A network is a system of connected devices sharing resources and data. Protocols
 
 **Contributors**
 
-[Oduortoni](https://github.com/oduortoni)
+Antony Oduor | [GITHUB/oduortoni](https://github.com/oduortoni)
 
