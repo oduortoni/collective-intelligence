@@ -32,6 +32,8 @@ func main() {
 	http.HandleFunc("/login", routes.Login(tmpl))
 	http.HandleFunc("/authenticate", routes.Authenticate)
 	http.HandleFunc("/dashboard", routes.Dashboard(tmpl))
+	http.HandleFunc("/blog", routes.Blog(tmpl))
+	http.HandleFunc("/logout", routes.Logout(tmpl))
 
 	http.ListenAndServe(address, nil)
 }

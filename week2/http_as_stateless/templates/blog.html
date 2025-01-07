@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Blog</title>
 </head>
 <body>
     <nav>
@@ -13,9 +13,15 @@
         <a href="/dashboard" style="text-decoration: none; display: inline-block; border: 1px solid rgba(30,30,30,0.3); margin: .5rem 1rem; padding: 1rem; background: rgba(30,30,30,0.7);color:white;">Dashboard</a>
         <a href="/logout" style="text-decoration: none; display: inline-block; border: 1px solid rgba(30,30,30,0.3); margin: .5rem 1rem; padding: 1rem; background: rgba(231, 71, 71, 0.7);color:white;">Logout</a>
     </nav>
-    <h1>Dashboard</h1>
+    <h1>Blog</h1>
     <div class="root">
-        Hello {{.}}, welcome to the dashboard.
+        Weclome {{.}},
+    </div>
+    <div>
+        <h2>Why it is impossible to switch from the C language</h2>
+        <p>
+            Have you ever wondered why languages claiming to be the "C killer" fail? It's simple: how can you replace a language when so much of your existing code is written in it? To truly replace something, you’d need to completely remove it. C has been used for everything since the 70s, so any new language that claims to replace it is usually dependent on C in some way—whether it's just adding a garbage collector or incorporating objects and libraries. To truly "kill" C, you'd have to rewrite major systems like Linux, Windows, and Apache—things built heavily on C. But rewriting these would require infinite resources, which most companies won't commit to. Why spend millions rewriting a working system when it’s cheaper to deal with small issues as they come up? It is just easier to dedicate a fraction of your profit to ransom demands than a whole budget on a rewrite. After all, who knows whether the company will become obsolete while in the process of a rewrite.
+        </p>
     </div>
 </body>
 </html>

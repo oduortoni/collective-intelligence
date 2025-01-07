@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"math/rand"
 	"os"
-	"time"
 )
 
 const filePath = "sessions.csv"
@@ -103,8 +102,6 @@ func Delete(token string) bool {
 }
 
 func generateToken() string {
-	rand.Seed(time.Now().UnixNano())
-
 	characters := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 	token := make([]byte, 16)
 
