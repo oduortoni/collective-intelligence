@@ -8,7 +8,7 @@ What does "stateless" mean? If each request is independent, how does the server 
 
 **Author:** Antony Oduor
 
-### 2) What is a network and why are protocols are important in a network
+### 2) What is a network and why are protocols important in a network
 
 A network is a system of connected devices sharing resources and data. Protocols are the rules that allow devices in these networks to communicate effectively and securely, ensuring data is structured, transmitted, and received properly. Whether it’s for sending an email, browsing a website, or transferring files, protocols are essential for making networks function smoothly and securely.
 

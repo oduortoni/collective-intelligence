@@ -13,3 +13,5 @@ Imagine trying to access a `/dashboard` that requires you to be logged in. Witho
 In this example, we’ll implement a simple way for the server to remember the client using cookies. The server will generate a token and store it in a CSV file. After logging in, the server sends the token to the browser as a cookie. The browser will then send that cookie with every subsequent request, allowing the server to remember the client.
 
 This will help you understand how HTTP's stateless nature works and how HTTP headers can be used to manage client-server communication.
+
+###
