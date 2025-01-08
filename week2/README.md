@@ -9,12 +9,12 @@ These subjects form the foundation of building scalable network applications, pr
    - Impact on application performance
    - When to use each approach
 
-2. **Threading Models in Network Applications**
-   - Multi-threading fundamentals for network programming
-   - Thread pools and resource management
-   - Thread synchronization in network contexts
+2. **Threading Models in Network Applications i.e concurrrency** 
+   - Thread pools implemented via goroutines and channels
+   - Worker Pools in the context of goroutines
+   - Synchronization between goroutines is handled via channels, sync package, or select statements
 
 3. **I/O Multiplexing**
-   - Understanding select(), poll(), and epoll()
+   - Understanding select in GO
    - Event-driven programming models
    - Implementing high-performance servers
